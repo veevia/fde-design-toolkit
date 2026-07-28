@@ -1,0 +1,90 @@
+{
+  "name": "fde-design-toolkit",
+  "version": "0.76.0-draft",
+  "status": "yellow",
+  "description": "Field-to-evidence design workflow for AI product specifications, experiments, and UX/UI.",
+  "sourceReview": {
+    "version": "0.75",
+    "inventoryCount": 68,
+    "mergedCount": 46,
+    "handoffCount": 14,
+    "droppedCount": 8,
+    "bodyReview": "not-run",
+    "behavioralEvaluation": "not-run"
+  },
+  "workflow": "workflows/fde-design-loop.md",
+  "skills": [
+    {
+      "name": "fde-intake",
+      "stage": "discover",
+      "path": "01-discover/fde-intake/SKILL.md",
+      "output": "field brief and unknowns register"
+    },
+    {
+      "name": "field-research-synthesis",
+      "stage": "discover",
+      "path": "01-discover/field-research-synthesis/SKILL.md",
+      "output": "evidence brief and current-state model"
+    },
+    {
+      "name": "problem-opportunity-frame",
+      "stage": "frame",
+      "path": "02-frame/problem-opportunity-frame/SKILL.md",
+      "output": "problem and opportunity frame"
+    },
+    {
+      "name": "concept-prioritization",
+      "stage": "frame",
+      "path": "02-frame/concept-prioritization/SKILL.md",
+      "output": "selected concept and scope boundary"
+    },
+    {
+      "name": "decision-log",
+      "stage": "frame",
+      "path": "02-frame/decision-log/SKILL.md",
+      "output": "evidence-linked decision record"
+    },
+    {
+      "name": "ai-experience-spec",
+      "stage": "specify",
+      "path": "03-specify/ai-experience-spec/SKILL.md",
+      "output": "testable AI experience design spec"
+    },
+    {
+      "name": "experiment-architecture",
+      "stage": "specify",
+      "path": "03-specify/experiment-architecture/SKILL.md",
+      "output": "smallest decisive experiment"
+    },
+    {
+      "name": "experience-architecture",
+      "stage": "specify",
+      "path": "03-specify/experience-architecture/SKILL.md",
+      "output": "information content and design-system contract"
+    },
+    {
+      "name": "ui-prototyping",
+      "stage": "prototype",
+      "path": "04-prototype/ui-prototyping/SKILL.md",
+      "output": "inspectable UX/UI prototype"
+    },
+    {
+      "name": "prototype-validation",
+      "stage": "prototype",
+      "path": "04-prototype/prototype-validation/SKILL.md",
+      "output": "UX/UI verification report"
+    },
+    {
+      "name": "field-feedback",
+      "stage": "learn",
+      "path": "05-learn/field-feedback/SKILL.md",
+      "output": "structured user evidence"
+    },
+    {
+      "name": "delivery-handoff",
+      "stage": "learn",
+      "path": "05-learn/delivery-handoff/SKILL.md",
+      "output": "delivery-ready design contract"
+    }
+  ]
+}

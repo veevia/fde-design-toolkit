@@ -1,0 +1,63 @@
+{
+  "asOf": "2026-07-27",
+  "release": "0.76.0-draft",
+  "status": "yellow",
+  "claim": "The inventory and replacement contracts pass deterministic validation; qualitative source-body scoring and behavioral validation are not complete.",
+  "environment": {
+    "fileEdits": "available",
+    "sourceBodyRead": "available",
+    "localCommandRunner": "available",
+    "agentEvalRunner": "unavailable"
+  },
+  "gates": [
+    {
+      "id": "inventory-closure",
+      "status": "pass",
+      "expected": 68,
+      "artifact": "v075-skill-review.csv",
+      "evidence": "68 ordered rationales match 68 unique ledger rows; 46 merge, 14 handoff, 8 drop."
+    },
+    {
+      "id": "source-body-review",
+      "status": "not-run",
+      "expected": 68,
+      "reason": "Source paths and frontmatter pass deterministic checks; qualitative rubric scoring remains."
+    },
+    {
+      "id": "core-contract-authoring",
+      "status": "authored",
+      "expected": 12,
+      "artifact": "../manifest.json"
+    },
+    {
+      "id": "deterministic-validation",
+      "status": "pass",
+      "command": "python3 validation/validate_package.py --source-root ../v0.75",
+      "result": "PASS: v0.76 deterministic package checks including v0.75 bodies"
+    },
+    {
+      "id": "behavioral-evaluation",
+      "status": "not-run",
+      "reason": "Requires golden trigger cases and independent output review."
+    },
+    {
+      "id": "workflow-scenarios",
+      "status": "not-run",
+      "reason": "Requires all preceding gates to pass."
+    }
+  ],
+  "skills": [
+    {"name": "fde-intake", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "field-research-synthesis", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "problem-opportunity-frame", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "concept-prioritization", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "decision-log", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "ai-experience-spec", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "experiment-architecture", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "experience-architecture", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "ui-prototyping", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "prototype-validation", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "field-feedback", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"},
+    {"name": "delivery-handoff", "contract": "authored", "deterministic": "pass", "behavioral": "not-run"}
+  ]
+}

@@ -1,0 +1,69 @@
+source_phase,source_skill,decision,target,reason,validation_state
+01-understand,analysis-report-formatter,merge,field-research-synthesis,Synthesis output belongs in one evidence workflow,inventory-only
+01-understand,design-sprint-planner,handoff,workshop-facilitation,Workshop orchestration is optional to the FDE product loop,inventory-only
+01-understand,journey-mapping-creator,merge,field-research-synthesis,Journey modeling is one synthesis view,inventory-only
+01-understand,jtbd-creator,merge,field-research-synthesis,JTBD is derived from field evidence,inventory-only
+01-understand,persona-archetype-creator,merge,field-research-synthesis,Archetypes are an optional evidence-backed synthesis view,inventory-only
+01-understand,socratic-intake,merge,fde-intake,Ambiguity reduction is the entry contract,inventory-only
+01-understand,survey-analytics,merge,field-research-synthesis,Survey evidence uses the common synthesis contract,inventory-only
+01-understand,survey-creator,merge,fde-intake,Method selection belongs in field planning,inventory-only
+01-understand,uxr-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
+02-identify,concept-creator,merge,concept-prioritization,Concept definition and selection share one decision surface,inventory-only
+02-identify,design-decision-articulator,merge,decision-log,All consequential choices use one decision record,inventory-only
+02-identify,design-pov-author,merge,problem-opportunity-frame,POV is part of a committed problem frame,inventory-only
+02-identify,flywheel-mapper,merge,concept-prioritization,Compounding logic is an optional concept criterion,inventory-only
+02-identify,hmw-opportunity-generator,merge,problem-opportunity-frame,HMW statements are an intermediate framing device,inventory-only
+02-identify,hypothesis-creator,merge,experiment-architecture,A hypothesis is the experiment entry contract,inventory-only
+02-identify,known-unknown-mapper,merge,fde-intake,Unknowns determine discovery and experiment scope,inventory-only
+02-identify,pain-point-mapper,merge,field-research-synthesis,Pain points must remain linked to evidence,inventory-only
+02-identify,pathfinder-prioritizer,merge,concept-prioritization,Prioritization closes the concept decision,inventory-only
+02-identify,prd-author,merge,ai-experience-spec,Product requirements belong in one testable experience spec,inventory-only
+02-identify,prioritization-alignment-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
+02-identify,problem-definition-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
+02-identify,problem-statement-builder,merge,problem-opportunity-frame,Problem statement is the frame nucleus,inventory-only
+02-identify,spec-driven-development,merge,ai-experience-spec,Behavioral requirements and acceptance criteria belong in the design spec,inventory-only
+02-identify,strategy-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
+02-identify,traffic-light-decider,merge,decision-log,Commitment status is part of every decision record,inventory-only
+03-execute,agent-skills-creator,handoff,agent-development,Skill authoring is toolkit infrastructure rather than FDE product work,inventory-only
+03-execute,agentic-trust-architecture,merge,ai-experience-spec,Trust boundaries are user-facing product requirements,inventory-only
+03-execute,confidence-calibrator,merge,ai-experience-spec,Confidence behavior belongs in the AI interaction contract,inventory-only
+03-execute,content-designer,merge,experience-architecture,Content structure is part of experience architecture,inventory-only
+03-execute,context-engineer,merge,ai-experience-spec,Context policy is specified at product level,inventory-only
+03-execute,data-integration-designer,merge,ai-experience-spec,Source purpose freshness and fallback are product requirements,inventory-only
+03-execute,design-system-author,merge,experience-architecture,Design tokens and component rules share the UX contract,inventory-only
+03-execute,diff-reviewer,handoff,engineering-review,Code and implementation diff review belongs to engineering,inventory-only
+03-execute,excalidraw-diagramming,drop,visual-adapter,Output format is an optional adapter,inventory-only
+03-execute,experiment-planner,merge,experiment-architecture,Experiment planning is a core FDE capability,inventory-only
+03-execute,figma-mcp-harness,handoff,design-tool-integration,Vendor integration is optional infrastructure,inventory-only
+03-execute,grounding-critic-designer,merge,ai-experience-spec,Grounding and claim checks are AI experience requirements,inventory-only
+03-execute,harness-builder,handoff,agent-development,Runtime harness implementation belongs to engineering,inventory-only
+03-execute,hitl-boundary-designer,merge,ai-experience-spec,Human commitment boundaries are product behavior,inventory-only
+03-execute,html-report-generator,drop,visual-adapter,Output format is an optional adapter,inventory-only
+03-execute,information-architecture-designer,merge,experience-architecture,Navigation and task structure are core UX architecture,inventory-only
+03-execute,mcp-integration-designer,handoff,agent-development,Protocol implementation belongs to engineering,inventory-only
+03-execute,mve-mvp-planner,merge,experiment-architecture,Smallest decisive scope belongs in experiment design,inventory-only
+03-execute,ontology-graph-designer,merge,ai-experience-spec,Domain entities and relationships constrain AI behavior,inventory-only
+03-execute,poc-planner,merge,experiment-architecture,A technical feasibility probe is one experiment type,inventory-only
+03-execute,prompt-designer,merge,ai-experience-spec,Prompt behavior is specified as an interaction contract,inventory-only
+03-execute,prototype-qa,merge,prototype-validation,Prototype conformance belongs in one validation gate,inventory-only
+03-execute,prototyping-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
+03-execute,provenance-ledger-designer,merge,ai-experience-spec,Source traceability is a user trust requirement,inventory-only
+03-execute,terminology-taxonomy-designer,merge,experience-architecture,Controlled vocabulary spans content and navigation,inventory-only
+03-execute,ui-creative-technologist,merge,ui-prototyping,Inspectable UX/UI prototyping remains core,inventory-only
+04-validate,accessibility-verification,merge,prototype-validation,Accessibility is a required UX gate,inventory-only
+04-validate,agentic-eval-harness,merge,experiment-architecture,Golden cases are specified as experiment evidence criteria,inventory-only
+04-validate,browser-testing-with-devtools,merge,prototype-validation,Rendered-state checks verify the experience contract,inventory-only
+04-validate,code-review-and-quality,handoff,engineering-review,Implementation quality belongs to engineering,inventory-only
+04-validate,code-simplification,handoff,engineering-review,Code maintenance belongs to engineering,inventory-only
+04-validate,debugging-and-error-recovery,handoff,engineering-review,Implementation debugging belongs to engineering,inventory-only
+04-validate,design-review,merge,prototype-validation,Visual and interaction critique is a core UX gate,inventory-only
+04-validate,performance-optimization,handoff,engineering-review,Performance profiling and remediation belong to engineering,inventory-only
+04-validate,security-and-hardening,handoff,security-review,Security verification requires specialist ownership,inventory-only
+04-validate,test-driven-development,handoff,engineering-review,Code-level test practice belongs to engineering,inventory-only
+05-ship,documentation-and-adrs,merge,decision-log,Design rationale belongs in the shared decision history,inventory-only
+05-ship,feedback-collector,merge,field-feedback,Raw field feedback needs one evidence contract,inventory-only
+05-ship,focus-group-planner,merge,field-feedback,Moderated group research is one feedback method,inventory-only
+05-ship,framework-handoff,merge,delivery-handoff,Design-to-delivery transition remains core,inventory-only
+05-ship,observability-and-instrumentation,handoff,engineering-delivery,Production instrumentation belongs to engineering,inventory-only
+05-ship,shipping-and-launch,handoff,engineering-delivery,Deployment and rollout execution belong to engineering,inventory-only
+05-ship,uxr-feedback-assist,drop,workflow,Thin router is replaced by explicit stage gates,inventory-only
