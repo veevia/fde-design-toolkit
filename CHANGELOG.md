@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Published as the public FDE Design Toolkit repository. The README leads with the design loop, its
+  nine gates and an animated overview (`docs/images/`). Its validation command no longer needs the
+  predecessor checkout; `--source-root` stays optional for source-body checks.
+
 ## 0.76.0-draft - 2026-07-27
 
 ### Scope
