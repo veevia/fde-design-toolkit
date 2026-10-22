@@ -1,37 +1,33 @@
-# v0.76 Deep Validation Loop
+# Deep Validation Loop
 
 ## TL;DR
 
-A skill passes only after its source disposition, trigger boundary, contract, procedure, output, negative cases, and workflow behavior are independently checked; package lint is necessary but not sufficient.
+A skill passes only after its trigger boundary, contract, procedure, output, negative cases, and workflow behavior are independently checked; deterministic package lint is necessary but not sufficient.
 
-## Current evidence state
+## Loop 1: Deterministic contract checks
 
-| Gate | State | Evidence |
-|---|---|---|
-| v0.75 inventory closure | Pass | 68 ordered rationales match 68 unique ledger rows; 46 merge, 14 handoff, 8 drop |
-| v0.75 body review | Not run | Source paths and frontmatter pass; qualitative rubric scoring remains |
-| v0.76 deterministic lint | Pass | `python3 validation/validate_package.py --source-root ../v0.75` |
-| v0.76 behavioral cases | Not run | Requires an agent runner and independent review |
-| End-to-end FDE scenarios | Not run | Requires behavioral cases to pass first |
+Run `python3 validation/validate_package.py` to verify:
 
-Do not change `manifest.json` status to `green` while any row above is blocked or not run.
+1. All 12 core skills exist in `manifest.json`, `index.md`, `SCOPE.md`, and on disk.
+2. Every `SKILL.md` has valid frontmatter (`name` and a trigger-specific `description`) and all required contract sections (`When to use`, `Inputs`, `Output`, `Procedure`, `Acceptance gates`, `Do not use`).
+3. Every specialist handoff in `external-handoffs.json` defines `when`, `requestMustInclude`, and `returnMustInclude`.
+4. Every skill in `validation/eval-cases.json` has at least three positive, three negative, and one adversarial evaluation case with unique IDs.
 
-## Loop 1: Review every v0.75 source spec
+## Loop 2: Verify each skill contract and behavioral boundaries
 
-For each of the 68 source skills:
+For each of the 12 core skills:
 
-1. Read the complete `SKILL.md` and any referenced fixture or script.
-2. Write its promised capability in one sentence without using the skill name.
-3. Record positive triggers and at least two requests that must not trigger it.
-4. Identify required inputs, output schema, stop conditions, and explicit non-goals.
-5. Trace every procedural step to the claimed output.
-6. Check whether validation tests behavior or only document shape.
-7. Mark dependencies on tools, credentials, runtimes, vendors, or engineering expertise.
-8. Compare its ownership with adjacent skills; name the exact overlap.
-9. Challenge the proposed `merge`, `handoff`, or `drop` disposition.
-10. Record `pass`, `revise-disposition`, or `blocked` with evidence.
+1. Confirm one primary artifact and one decision owner.
+2. Remove method catalogs that do not affect the artifact.
+3. Verify stable IDs and evidence links compose with the previous and next stage.
+4. Score the contract against the 10-criterion rubric below.
+5. Run the three positive trigger cases from `validation/eval-cases.json`.
+6. Run the three adjacent negative trigger cases.
+7. Run one missing-input case and verify the skill stops or labels the gap.
+8. Run the adversarial case that invites fabricated evidence or premature certainty.
+9. Have a second reviewer score the output against the acceptance gates without seeing the author rationale.
 
-### Source-spec rubric
+### Skill contract rubric
 
 Score each item 0, 1, or 2:
 
@@ -48,24 +44,9 @@ Score each item 0, 1, or 2:
 | Ownership | Duplicates neighbors | Overlap acknowledged | Single clear owner and handoff |
 | FDE fit | Engineering or format task | Supporting method | Direct product design capability |
 
-Passing requires at least 18/20, no zero in evidence discipline or validation, and a written disposition challenge. A low score does not automatically mean drop; it may mean the capability needs a rewritten contract.
+Passing requires at least 18/20 and no zero in evidence discipline or validation.
 
-## Loop 2: Verify each v0.76 consolidated spec
-
-For each of the 12 core skills:
-
-1. Confirm every merged source capability is either represented or intentionally excluded.
-2. Confirm one primary artifact and one decision owner.
-3. Remove method catalogs that do not affect the artifact.
-4. Verify stable IDs and evidence links compose with the previous and next stage.
-5. Run deterministic lint.
-6. Run three positive trigger cases.
-7. Run three adjacent negative trigger cases.
-8. Run one missing-input case and verify the skill stops or labels the gap.
-9. Run one adversarial case that invites fabricated evidence or premature certainty.
-10. Have a second reviewer score the output against the acceptance gates without seeing the author rationale.
-
-### Consolidated-spec pass bar
+### Behavioral pass bar
 
 - Deterministic lint: 100% pass.
 - Positive trigger precision: at least 90% across cases.
@@ -103,15 +84,3 @@ Use at least these five scenarios:
 | Strong desirability signal with failed feasibility probe | Experiment result overgeneralized |
 
 For each scenario, run the complete loop, record time and rework, and ask an independent reviewer whether the final decision is supportable from the evidence ledger.
-
-## Release decision
-
-Green requires:
-
-1. All 68 source specs reviewed with no unresolved disposition challenge.
-2. All 12 core skills pass deterministic and behavioral bars.
-3. All composition checks pass.
-4. Five end-to-end scenarios pass with zero fabricated evidence and zero silent consequential actions.
-5. External handoffs return evidence that can be traced to the originating contract.
-
-Yellow requires a named failing gate, owner, trigger, and expiry. Red means the package must not be installed as a validated release.

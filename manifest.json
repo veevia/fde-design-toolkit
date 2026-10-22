@@ -1,17 +1,6 @@
 {
   "name": "fde-design-toolkit",
-  "version": "0.76.0-draft",
-  "status": "yellow",
   "description": "Field-to-evidence design workflow for AI product specifications, experiments, and UX/UI.",
-  "sourceReview": {
-    "version": "0.75",
-    "inventoryCount": 68,
-    "mergedCount": 46,
-    "handoffCount": 14,
-    "droppedCount": 8,
-    "bodyReview": "not-run",
-    "behavioralEvaluation": "not-run"
-  },
   "workflow": "workflows/fde-design-loop.md",
   "skills": [
     {

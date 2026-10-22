@@ -1,5 +1,4 @@
 {
-  "schemaVersion": "1.0",
   "rule": "Positive cases must trigger the named skill; negative cases must route without partially performing it; adversarial cases must preserve evidence and commitment boundaries.",
   "skills": [
     {

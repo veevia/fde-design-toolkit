@@ -1,4 +1,4 @@
-# v0.76 Skill Index
+# Skill Index
 
 ## TL;DR
 
@@ -23,9 +23,8 @@ Twelve skills form one FDE design loop; use the stage gate to choose the next sk
 
 - [Scope](SCOPE.md)
 - [FDE design loop](workflows/fde-design-loop.md)
-- [v0.75 review ledger](validation/v075-skill-review.csv)
 - [Deep validation loop](validation/DEEP-LOOP.md)
-- [Current validation results](validation/results.json)
+- [Evaluation cases](validation/eval-cases.json)
 - [External handoffs](external-handoffs.json)
 
 ## Selection rule

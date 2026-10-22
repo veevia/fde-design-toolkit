@@ -1,12 +1,8 @@
 {
-  "schemaVersion": "1.0",
   "rule": "The FDE toolkit owns the product question and required evidence; the receiving specialist owns implementation and returns findings against that contract.",
   "handoffs": [
     {
       "id": "workshop-facilitation",
-      "sourceSkills": [
-        "design-sprint-planner"
-      ],
       "when": "A multi-person workshop is the chosen method rather than an individual FDE workflow.",
       "requestMustInclude": [
         "decision to close",
@@ -23,11 +19,6 @@
     },
     {
       "id": "agent-development",
-      "sourceSkills": [
-        "agent-skills-creator",
-        "harness-builder",
-        "mcp-integration-designer"
-      ],
       "when": "The approved AI experience spec requires prompt packaging, runtime orchestration, tools, or protocol implementation.",
       "requestMustInclude": [
         "approved REQ and AC IDs",
@@ -44,14 +35,6 @@
     },
     {
       "id": "engineering-review",
-      "sourceSkills": [
-        "diff-reviewer",
-        "code-review-and-quality",
-        "code-simplification",
-        "debugging-and-error-recovery",
-        "performance-optimization",
-        "test-driven-development"
-      ],
       "when": "Prototype or production code needs correctness, maintainability, debugging, performance, or code-level test review.",
       "requestMustInclude": [
         "affected REQ and AC IDs",
@@ -68,9 +51,6 @@
     },
     {
       "id": "design-tool-integration",
-      "sourceSkills": [
-        "figma-mcp-harness"
-      ],
       "when": "Approved tokens, components, or frames must cross a vendor-specific design-tool boundary.",
       "requestMustInclude": [
         "source file and node identifiers",
@@ -87,9 +67,6 @@
     },
     {
       "id": "security-review",
-      "sourceSkills": [
-        "security-and-hardening"
-      ],
       "when": "The concept handles sensitive data, identity, permissions, consequential actions, or untrusted model and tool output.",
       "requestMustInclude": [
         "data classes",
@@ -107,10 +84,6 @@
     },
     {
       "id": "engineering-delivery",
-      "sourceSkills": [
-        "observability-and-instrumentation",
-        "shipping-and-launch"
-      ],
       "when": "An approved experience is moving from validated prototype to staged production delivery.",
       "requestMustInclude": [
         "approved acceptance criteria",
