@@ -2,7 +2,11 @@
 
 A gated design workflow for forward-deployed engineers (FDEs) and product designers. Twelve [Agent Skills](https://agentskills.io) (`SKILL.md`) turn an ambiguous field request into a testable AI experience specification, a decisive experiment, and a delivery-ready UX/UI contract.
 
-![The FDE design loop as an animated diagram in five stage columns. A field request enters Discover: fde-intake (gate G0) and field-research-synthesis (G1). Frame: problem-opportunity-frame, concept-prioritization and decision-log (G2). Specify: ai-experience-spec and experience-architecture in parallel (G3), then experiment-architecture (G4). Prototype: ui-prototyping (G5) and prototype-validation (G6), which can send work back to fix. Learn: field-feedback, decision-log again (G7) and delivery-handoff (G8), which outputs a design contract. Dotted lines send the spec, the experiment and the handoff to specialist handoffs; a dashed rail returns work from the Learn decision to the earliest stage that new evidence invalidates.](docs/images/fde-design-loop.gif)
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/images/fde-design-loop.png">
+  <source type="image/avif" srcset="docs/images/fde-design-loop.avif">
+  <img alt="The FDE design loop as an animated diagram in five stage columns. A field request enters Discover: fde-intake (gate G0) and field-research-synthesis (G1). Frame: problem-opportunity-frame, concept-prioritization and decision-log (G2). Specify: ai-experience-spec and experience-architecture in parallel (G3), then experiment-architecture (G4). Prototype: ui-prototyping (G5) and prototype-validation (G6), which can send work back to fix. Learn: field-feedback, decision-log again (G7) and delivery-handoff (G8), which outputs a design contract. Dotted lines send the spec, the experiment and the handoff to specialist handoffs; a dashed rail returns work from the Learn decision to the earliest stage that new evidence invalidates. The animation brings each stage into focus in turn, then returns to the full view." src="docs/images/fde-design-loop.gif">
+</picture>
 
 <sub>Static diagram: [docs/images/fde-design-loop.png](docs/images/fde-design-loop.png)</sub>
 
